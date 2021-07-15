@@ -2,7 +2,7 @@ title: Severin Alexander Bühler
 author: Severin Alexander Bühler
 email: severin@feoh.io
 description: > # this means to ignore newlines until "baseurl:"
-  Blog for Lightning Network and LnRouter.app posts.
+  Lightning Network, LnRouter.app and more.
 
 # social links
 twitter_username: SeverinAlexB # DO NOT include the @ character, or else the build will fail!
