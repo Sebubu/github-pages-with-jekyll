@@ -1,3 +1,8 @@
+---
+title: "Reverse-engineering Lightning Labs Terminal Score"
+date: 2021-07-14
+---
+
 # Reverse-engineering Lightning Labs Terminal Score
 
 I recently published the Terminal score Debugger on lnrouter.app. It lets you choose a node and dissects the different heuristics used by the famous Terminal Web score to rank nodes.
