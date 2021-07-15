@@ -1,5 +1,5 @@
 ---
-title: "Welcome to my blog"
+title: "Severin Alexander Bühler"
 ---
 
-I'm glad you are here. I plan to talk about ... Yolo
+Lightning Network, LnRouter.app and more.
