@@ -15,7 +15,8 @@ Nonetheless, the problem was that it was hard to introduce new users to this kno
 
 ## What does the score measure?
 ```
-A list of nodes that Lightning Labs has evaluated as top performing nodes on the network. — Lightning Labs
+A list of nodes that Lightning Labs has evaluated as top performing nodes 
+on the network. — Lightning Labs
 ```
 
 Terminal measures and ranks high performing nodes in the network. It does that by counting how many good channels to stable peers you have.
@@ -42,7 +43,9 @@ Particularly, I like the requirement for 1+ million routable satoshi, as it sepa
 The score is a good score because it measures honest and hard to fake signals.
 Plenty of research has been done on signaling theory over the last 20 years. The score and especially the 1 million routable satoshi heuristic is a good example of a hard-to-fake signal explained by the handicap principle.
 ```
-The handicap principle is a hypothesis to explain how evolution may lead to “honest” or reliable signalling between animals which have an obvious motivation to bluff or deceive each other. — Amotz Zahavi
+The handicap principle is a hypothesis to explain how evolution may lead 
+to “honest” or reliable signalling between animals which have an obvious 
+motivation to bluff or deceive each other. — Amotz Zahavi
 ```
 
 You can not fake having routable money on your node. Putting real funds on it is costly to do. Therefore, I believe the Terminal score is not game-able, and “When a measure becomes a target, it ceases to be a good measure” does not apply in this case. Terminal did a good job here.
