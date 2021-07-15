@@ -1,5 +1,5 @@
 ---
-title: "Severin Alexander Bühler"
+title: "Personal blog"
 ---
 
 Lightning Network, LnRouter.app and more.
