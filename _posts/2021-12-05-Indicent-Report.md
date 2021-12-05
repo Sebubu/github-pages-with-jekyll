@@ -51,8 +51,8 @@ due to timeouts.
 
 The node doesn't have that many stuck payments normally. 
 During the incident, the node might have been in a state where it continually accepted new HTLCs but was not able to process it further.
-I am not sure why this happened but we have seen periods in the network with an increased amount of stuck payments before.
-Wallet of Satoshi and Breez both had periods where they lost a lot of channels and the amount of stuck payments in the network were extremely high at the same time.
+This is speculation and I am not sure why this happened but we have seen periods in the network with an increased amount of stuck payments before.
+Wallet of Satoshi and Breez both had periods when they lost a lot of channels and the amount of stuck payments in the network were extremely high at the same time.
 
 This issue is very unfortunate from a node operators perspective (loss of channels) and also from a network perspective (lots of timeouts).
 
