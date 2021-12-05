@@ -50,11 +50,10 @@ The node experienced a lot of force-closes due to the incident. These force-clos
 due to timeouts.
 
 The node doesn't have that many stuck payments normally. 
-During the incident, the node might have been in a state where it continually accepted new HTLCs but was not able to process it further. 
+During the incident, the node might have been in a state where it continually accepted new HTLCs but was not able to process it further.
+I am not sure why this happened but we have seen periods in the network with an increased amount of stuck payments before.
+Wallet of Satoshi and Breez both had periods where they lost a lot of channels and the amount of stuck payments in the network were extremely high at the same time.
 
-Lightning payments lack a HTLC ACK message. Therefore, if the network module of LND was still running but couldnt write the HTLC to disk we would have a discrepancy between node and peer.
+This issue is very unfortunate from a node operators perspective (loss of channels) and also from a network perspective (lots of timeouts).
 
-This state is very unfortunate from a node operators perspective (loss of channels) and also from a network perspective.
-Having seen periods in the network with an increased amount of stuck payments, this could have been a potential issue. 
-Wallet of Satoshi and Breez both had periods where they lost a lot of channels and the amount of stuck payments in the network were extremely high.
 
