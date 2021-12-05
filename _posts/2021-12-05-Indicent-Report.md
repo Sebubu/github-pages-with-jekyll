@@ -36,7 +36,7 @@ The final bug had to do with the fee estimator (See [#6056](https://github.com/l
 
 After that the node started to work again.
 
-Thanks to @openoms and @alexbosworth for the support.
+Thanks to [@openoms](https://twitter.com/openoms) and [@alexbosworth](https://twitter.com/alexbosworth) for the support. These were two days of heavy uncertainty.
 
 ### Related issues
 
