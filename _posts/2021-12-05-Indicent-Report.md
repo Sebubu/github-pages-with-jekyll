@@ -3,7 +3,7 @@ title: "[Incident Report] LND Linux open file limit, fee estimator and force-clo
 date: 2021-12-05
 ---
 
-I would like to describe an incident here that we run into that led to the loss of half of the nodes channels.
+I would like to describe an incident here that we run into that led to the loss of half of the nodes channels (~60).
 
 #### The setup
 A client of mine runs one Bitcoin Core and connects several LND nodes to it with Neutrino. Bitcoin Core and LND are on different machines.
@@ -44,9 +44,12 @@ I opened the following issues that cover the mentioned issues/bugs above:
 - [#6056](https://github.com/lightningnetwork/lnd/issues/6056)
 - [#6057](https://github.com/lightningnetwork/lnd/issues/6057)
 
-### Your environment
+### Further thoughts
 
-* version of `lnd`: 0.13.4
-* which operating system (`uname -a` on *Nix): Linux Nuc9 5.11.0-41-generic~20.04.1-Ubuntu SMP x86_64 x86_64 x86_64 GNU/Linux
-* version of `btcd`, `bitcoind`, or other backend: Neutrino
-* any other relevant environment details
+The node experienced a lot of force-closes due to the incident. These force-closes are a result of stuck HTLCs and the peers closing channels
+due to timeouts.
+
+The node doesn't have that many stuck payments normally. During the incident, the node must have been in a state where it continually accepted new HTLCs
+but was not able to process it further. This state is very unfortunate from a node operators perspective (loss of channels) and also from a network perspective.
+Having seen periods in the network with an increased amount of stuck payments, this could have been a potential issue. Wallet of Satoshi and Breez had incidents like this before.
+
