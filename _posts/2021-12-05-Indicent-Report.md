@@ -3,7 +3,7 @@ title: "[Incident Report] LND Linux open file limit, fee estimator and force-clo
 date: 2021-12-05
 ---
 
-I would like to describe an incident here that we run into that led to the loss of half of the nodes channels (~60).
+I would like to describe an incident we run into that led to the loss of half of the nodes channels (~60).
 
 ### The setup
 A client of mine runs one Bitcoin Core and connects several LND nodes to it with Neutrino. Bitcoin Core and LND are on different machines.
