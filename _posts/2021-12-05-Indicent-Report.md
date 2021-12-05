@@ -5,10 +5,10 @@ date: 2021-12-05
 
 I would like to describe an incident here that we run into that led to the loss of half of the nodes channels (~60).
 
-#### The setup
+### The setup
 A client of mine runs one Bitcoin Core and connects several LND nodes to it with Neutrino. Bitcoin Core and LND are on different machines.
 
-#### The story
+### The story
 At one point we observed that one LND node is acting weirdly. A little later it was stuck in a restart loop.
 
 A lot of errors showed up in the logs. Here is an excerpt. Some of these error showed up hundreds of times.
@@ -49,7 +49,12 @@ I opened the following issues that cover the mentioned issues/bugs above:
 The node experienced a lot of force-closes due to the incident. These force-closes are a result of stuck HTLCs and the peers closing channels
 due to timeouts.
 
-The node doesn't have that many stuck payments normally. During the incident, the node must have been in a state where it continually accepted new HTLCs
-but was not able to process it further. This state is very unfortunate from a node operators perspective (loss of channels) and also from a network perspective.
-Having seen periods in the network with an increased amount of stuck payments, this could have been a potential issue. Wallet of Satoshi and Breez had incidents like this before.
+The node doesn't have that many stuck payments normally. 
+During the incident, the node might have been in a state where it continually accepted new HTLCs but was not able to process it further. 
+
+Lightning payments lack a HTLC ACK message. Therefore, if the network module of LND was still running but couldnt write the HTLC to disk we would have a discrepancy between node and peer.
+
+This state is very unfortunate from a node operators perspective (loss of channels) and also from a network perspective.
+Having seen periods in the network with an increased amount of stuck payments, this could have been a potential issue. 
+Wallet of Satoshi and Breez both had periods where they lost a lot of channels and the amount of stuck payments in the network were extremely high.
 
